@@ -1,6 +1,3 @@
-
-
-# Open the FASTQ file for reading
 fastq = open('SRR28797574_1.fastq', 'r')
 
 genome = open('genome.txt', 'w')
