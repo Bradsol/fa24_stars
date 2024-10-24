@@ -1,17 +1,17 @@
 
-def create_kmers(sequence, k):
+def create_kmers(sequence, k): 
     kmers = []
-    for i in range(len(sequence) - k + 1):
-        kmers.append(sequence[i:i+k])
+    for i in range(len(sequence) - k + 1): # you can only make length - k + 1 kmers 
+        kmers.append(sequence[i:i+k]) # add kmer to the list 
     return kmers
 
 def kmer_count(kmers, text, k): 
-  kmer_counts = {}
+  kmer_counts = {} #create dictionary 
 
-  for kmer in kmers:
+  for kmer in kmers: #iterates through kmer list, initializing every count to 0 
     kmer_counts[kmer] = 0
 
-  for i in range(len(text) - k + 1):
+  for i in range(len(text) - k + 1): 
     subsequence = text[i:i+k]
     if subsequence in kmer_counts:
       kmer_counts[subsequence] += 1
@@ -36,7 +36,7 @@ with open('cleanGenome.txt', 'r') as cleanGenome:
     # Iterate over lines in cleanGenome.txt
     for line in cleanGenome: 
       #print(line)
-      if num > 100000:  # You only want to read the first line based on your original code
+      if num > 100000:  
           break
 
         # Count k-mers in the current line of cleanGenome
@@ -54,30 +54,6 @@ most_frequent_count = total_kmer_counts[most_frequent_kmer]
 
 # Print the most frequent k-mer and its count
 print(f"The most frequent k-mer is: {most_frequent_kmer} with a count of {most_frequent_count}")
-
-
-
-
-
-
-
-
-
-# k = 50
-# num = 1
-# kmers = create_kmers(text_kras, k)
-
-# for line in cleanGenome: 
-#   if num > 1:
-#     break
-
-#   kmer_count_dict = kmer_count(kmers, line, k)
-#   print(f"Line {num}: {kmer_count_dict}")
-#   num = num + 1
-  
-
-
-
 
 
 

@@ -38,9 +38,7 @@ def write_clean(inputFile, outputFile):
 # goes through specified number of SEQUENCE lines 
 validCount = 0
 try:
-    # Open the FASTQ file in read mode
     with open(fastq1_Input, 'r') as fastq1:
-        # Open the output genome file in write mode
         with open(cleanGenome_Input, 'w') as cleanGenome:
 
           validCount += write_clean(fastq1, cleanGenome)
