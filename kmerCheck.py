@@ -673,19 +673,19 @@ def kmer_count(kmers, text, k):
   return kmer_counts
 
 #open file 
-cleanGenome = open('cleanGenome.txt', 'r')
+# cleanGenome = open('cleanGenome.txt', 'r')
 
-k = 50
-num = 1
-kmers = create_kmers(text_kras, k)
+# k = 50
+# num = 1
+# kmers = create_kmers(text_kras, k)
 
-for line in cleanGenome: 
-  if num > 1:
-    break
+# for line in cleanGenome: 
+#   if num > 1:
+#     break
 
-  kmer_count_dict = kmer_count(kmers, line, k)
-  print(f"Line {num}: {kmer_count_dict}")
-  num = num + 1
+#   kmer_count_dict = kmer_count(kmers, line, k)
+#   print(f"Line {num}: {kmer_count_dict}")
+#   num = num + 1
   
 
 
